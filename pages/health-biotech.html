@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & BioTech - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>🧬 Health & BioTech Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>Medical Advances and Biotechnology</h2>
+      <p>Track breakthroughs in healthcare, biotechnology, and wellness science</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What health/biotech topic did you study?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write about medical research, biotech innovations, or health insights..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 22, 2025</div>
+        <div class="entry-title">CRISPR Gene Editing Applications</div>
+        <div class="entry-content">
+          Explored recent developments in gene editing technology:
+          <ul>
+            <li>Treatment of genetic disorders like sickle cell disease</li>
+            <li>Agricultural applications for crop improvement</li>
+            <li>Potential for treating age-related diseases</li>
+            <li>Ethical considerations and regulatory frameworks</li>
+          </ul>
+          CRISPR is revolutionizing medicine but requires careful ethical oversight.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">CRISPR</span>
+          <span class="tag">Gene Editing</span>
+          <span class="tag">Biotechnology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

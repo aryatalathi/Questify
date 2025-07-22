@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Progress Calendar - Questify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/learning-calendar.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../assets/icons/logo-q.svg" alt="Questify Logo" class="navbar-logo">
+      <h1>📅 Learning Progress Calendar</h1>
+    </div>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+    </div>
+  </nav>
+
+  <div class="calendar-container">
+    <div class="calendar-header-section">
+      <h2>Track Your Learning Journey</h2>
+      <p>Visualize your learning consistency and progress across all areas</p>
+    </div>
+
+    <div class="calendar-controls">
+      <div class="date-filter">
+        <input type="date" id="track-date" class="date-input">
+        <select id="track-area" class="area-select">
+          <option value="">All Learning Areas</option>
+        </select>
+        <button onclick="checkLearningProgress()" class="check-btn">Check Progress</button>
+      </div>
+      
+      <div class="calendar-navigation">
+        <button onclick="previousMonth()" class="nav-btn">← Previous</button>
+        <h3 id="calendar-title">Loading Calendar...</h3>
+        <button onclick="nextMonth()" class="nav-btn">Next →</button>
+      </div>
+    </div>
+
+    <div class="learning-calendar">
+      <div class="calendar-legend">
+        <div class="legend-item">
+          <div class="legend-color has-entries"></div>
+          <span>Days with learning entries</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color today"></div>
+          <span>Today</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color normal"></div>
+          <span>No entries</span>
+        </div>
+      </div>
+      
+      <div id="calendar-grid" class="calendar-grid">
+        <div class="calendar-header">
+          <div class="calendar-header-day">Sun</div>
+          <div class="calendar-header-day">Mon</div>
+          <div class="calendar-header-day">Tue</div>
+          <div class="calendar-header-day">Wed</div>
+          <div class="calendar-header-day">Thu</div>
+          <div class="calendar-header-day">Fri</div>
+          <div class="calendar-header-day">Sat</div>
+        </div>
+        <div id="calendar-days" class="calendar-days"></div>
+      </div>
+    </div>
+
+    <div class="progress-summary" id="progress-summary">
+      <h3>Monthly Progress Summary</h3>
+      <div class="summary-stats" id="summary-stats">
+        Loading progress data...
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/learning-calendar.js"></script>
+</body>
+</html>

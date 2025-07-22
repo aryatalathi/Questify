@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money & Investments - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>💰 Money & Investments Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>My Financial Learning Journey</h2>
+      <p>Track your insights about investments, financial strategies, and money management</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What financial concept did you learn?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write your notes, investment ideas, or financial insights..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 21, 2025</div>
+        <div class="entry-title">Understanding Index Fund Investing</div>
+        <div class="entry-content">
+          Learned about the power of diversified index fund investing:
+          <ul>
+            <li>Low expense ratios compared to actively managed funds</li>
+            <li>Built-in diversification reduces risk</li>
+            <li>Historical performance often beats active management</li>
+            <li>Dollar-cost averaging strategy for consistent investing</li>
+          </ul>
+          Next step: Research specific index funds for my portfolio.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Index Funds</span>
+          <span class="tag">Diversification</span>
+          <span class="tag">Long-term</span>
+        </div>
+      </div>
+
+      <div class="diary-entry">
+        <div class="entry-date">July 19, 2025</div>
+        <div class="entry-title">Emergency Fund Basics</div>
+        <div class="entry-content">
+          Key principles for building an emergency fund:
+          - Save 3-6 months of living expenses
+          - Keep it in a high-yield savings account
+          - Don't invest emergency funds in volatile assets
+          - Build it gradually, even $50/month helps
+          
+          Started calculating my monthly expenses to determine target amount.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Emergency Fund</span>
+          <span class="tag">Savings</span>
+          <span class="tag">Financial Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

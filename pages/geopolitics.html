@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geopolitics - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>🌍 Geopolitics Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>Understanding Global Affairs</h2>
+      <p>Explore international relations, policy decisions, and their global impact</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What geopolitical topic did you study?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write about international events, policy analysis, or global trends..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 22, 2025</div>
+        <div class="entry-title">Trade Wars and Economic Impact</div>
+        <div class="entry-content">
+          Studied the effects of trade tensions between major economies:
+          <ul>
+            <li>Tariffs impact both importing and exporting countries</li>
+            <li>Supply chain disruptions affect global markets</li>
+            <li>Consumers often bear the cost through higher prices</li>
+            <li>Countries seek alternative trade partnerships</li>
+          </ul>
+          Need to follow up on recent WTO decisions and their implications.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Trade</span>
+          <span class="tag">Economics</span>
+          <span class="tag">Global Markets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

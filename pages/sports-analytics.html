@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports & Analytics - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>⚽ Sports & Analytics Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>Sports Science and Data Analytics</h2>
+      <p>Explore performance metrics, statistics, and the science behind sports</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What sports analytics concept did you learn?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write about statistics, performance analysis, or sports science..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 22, 2025</div>
+        <div class="entry-title">Expected Goals (xG) in Football</div>
+        <div class="entry-content">
+          Understanding Expected Goals metric in football analytics:
+          <ul>
+            <li>Measures quality of scoring chances based on historical data</li>
+            <li>Considers shot location, angle, and type of play</li>
+            <li>Better predictor of future performance than actual goals</li>
+            <li>Helps identify overperforming/underperforming players</li>
+          </ul>
+          This metric revolutionizes how we evaluate player and team performance.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">xG</span>
+          <span class="tag">Football Analytics</span>
+          <span class="tag">Performance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

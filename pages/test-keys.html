@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LocalStorage Key Test</title>
+</head>
+<body>
+    <h1>LocalStorage Key Test</h1>
+    <button onclick="testKeys()">Test Key Generation</button>
+    <button onclick="clearAll()">Clear All</button>
+    <div id="results"></div>
+
+    <script>
+        function testKeys() {
+            const areas = ["AI & Technology","Money & Investments","Climate & Sustainability"];
+            const results = document.getElementById('results');
+            results.innerHTML = '<h3>Key Generation Test:</h3>';
+            
+            areas.forEach(area => {
+                // Script.js method
+                const scriptKey = area.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+                const scriptFullKey = `diary-entries-${scriptKey}`;
+                
+                // Create test data for this area
+                const testData = [{
+                    id: Date.now(),
+                    date: '2025-07-22',
+                    title: `Test entry for ${area}`,
+                    content: `This is a test entry for ${area} topic`
+                }];
+                
+                // Save test data
+                localStorage.setItem(scriptFullKey, JSON.stringify(testData));
+                
+                results.innerHTML += `
+                    <p><strong>${area}:</strong></p>
+                    <p>Key: ${scriptFullKey}</p>
+                    <p>Data saved: ${testData.length} entries</p>
+                    <hr>
+                `;
+            });
+            
+            // Show all localStorage keys
+            results.innerHTML += '<h4>All localStorage keys:</h4>';
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('diary-entries')) {
+                    const data = localStorage.getItem(key);
+                    const parsed = JSON.parse(data);
+                    results.innerHTML += `<p>${key}: ${parsed.length} entries</p>`;
+                }
+            }
+        }
+        
+        function clearAll() {
+            localStorage.clear();
+            document.getElementById('results').innerHTML = '<p>All localStorage cleared</p>';
+        }
+    </script>
+</body>
+</html>

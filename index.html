@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="assets/icons/logo-q.svg" alt="Questify Logo" class="navbar-logo">
+      <h1>Questify — Fuel Your Curiosity Daily 🚀</h1>
+    </div>
+    <div class="menu">
+      <a href="#learn">Learn</a>
+      <a href="#track">Track</a>
+      <a href="#write">View</a>
+      <a href="https://chat.openai.com" target="_blank">Ask GPT</a>
+      <div class="user-menu">
+        <span id="user-name" class="user-name">User</span>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="home">
+    <div class="animated-background">
+      <div class="floating-shape shape1"></div>
+      <div class="floating-shape shape2"></div>
+      <div class="floating-shape shape3"></div>
+      <div class="floating-shape shape4"></div>
+      <div class="floating-shape shape5"></div>
+    </div>
+    <div class="home-content">
+      <h2 class="typewriter-text">Welcome to Your Daily Learning Hub!</h2>
+      <p class="animate-slide-up">Discover knowledge, track growth, and stay curious.</p>
+      <div class="learning-icons">
+        <div class="icon-item">📚</div>
+        <div class="icon-item">🚀</div>
+        <div class="icon-item">💡</div>
+        <div class="icon-item">🎯</div>
+        <div class="icon-item">✨</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="learn" class="learn">
+    <h2>Explore Learning Areas</h2>
+    <div id="cards" class="cards"></div>
+  </section>
+
+  <section id="track" class="track">
+    <h2>Track Your Learning</h2>
+    <div class="track-form">
+      <input type="date" id="track-date">
+      <select id="track-area" class="track-area-select">
+        <option value="">Choose learning area...</option>
+      </select>
+      <div class="track-buttons">
+        <button onclick="checkLearningProgress()">Check Progress</button>
+        <button onclick="window.location.href='pages/learning-calendar.html'">View Learning Calendar</button>
+      </div>
+    </div>
+    <div id="progress-display" class="progress-display" style="display: none;">
+      <h3>Progress Summary</h3>
+      <div id="progress-content"></div>
+    </div>
+  </section>
+
+  <section id="write" class="write">
+    <h2>View and Add Notes</h2>
+    <div id="notes" class="notes"></div>
+  </section>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

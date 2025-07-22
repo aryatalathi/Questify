@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startups & Innovations - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>🚀 Startups & Innovations Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>Entrepreneurship and Innovation Journey</h2>
+      <p>Learn from startup successes, failures, and breakthrough innovations</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What startup insight did you discover?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write about business models, innovations, or entrepreneurship lessons..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 20, 2025</div>
+        <div class="entry-title">Product-Market Fit Strategies</div>
+        <div class="entry-content">
+          Key insights on achieving product-market fit:
+          <ul>
+            <li>Start with a clear problem statement</li>
+            <li>Build an MVP to test core assumptions</li>
+            <li>Listen to customer feedback and iterate quickly</li>
+            <li>Measure user engagement and retention metrics</li>
+          </ul>
+          Many startups fail because they build products nobody wants. Validation first!
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Product-Market Fit</span>
+          <span class="tag">MVP</span>
+          <span class="tag">Customer Validation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

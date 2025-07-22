@@ -1,0 +1,39 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="miniLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="miniIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff758c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff7eb3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Mini icon -->
+  <g transform="translate(5, 5)">
+    <!-- Book base -->
+    <rect x="2" y="25" width="8" height="2" rx="1" fill="url(#miniIconGradient)" opacity="0.8"/>
+    <rect x="3" y="23" width="6" height="2" rx="1" fill="url(#miniIconGradient)" opacity="0.9"/>
+    
+    <!-- Lightbulb -->
+    <circle cx="6" cy="15" r="5" fill="url(#miniIconGradient)"/>
+    <rect x="4.5" y="19" width="3" height="1.5" rx="0.5" fill="#ffd700"/>
+    
+    <!-- Light rays -->
+    <path d="M6 6 L6 9" stroke="#ffd700" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M14 15 L11 15" stroke="#ffd700" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M1 15 L4 15" stroke="#ffd700" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Compact text -->
+  <text x="25" y="18" font-family="'Playfair Display', serif" font-size="16" font-weight="700" fill="url(#miniLogoGradient)">
+    Questify
+  </text>
+  
+  <text x="25" y="30" font-family="'Inter', sans-serif" font-size="8" font-weight="500" fill="#666" opacity="0.8">
+    Learning Hub
+  </text>
+</svg>

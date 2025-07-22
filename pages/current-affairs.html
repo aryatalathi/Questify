@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Affairs - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>📰 Current Affairs Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>Staying Informed About World Events</h2>
+      <p>Track important news, analyze trends, and understand their broader implications</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What current event did you analyze?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write about news analysis, trends, or their implications..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <div class="diary-entry">
+        <div class="entry-date">July 22, 2025</div>
+        <div class="entry-title">Climate Policy Changes Impact</div>
+        <div class="entry-content">
+          Analyzed recent climate policy announcements and their potential impact:
+          <ul>
+            <li>New carbon pricing mechanisms in major economies</li>
+            <li>Green technology investment incentives</li>
+            <li>Impact on traditional energy sectors</li>
+            <li>International cooperation challenges</li>
+          </ul>
+          These policy shifts will reshape global energy markets over the next decade.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Climate Policy</span>
+          <span class="tag">Energy</span>
+          <span class="tag">Economics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>

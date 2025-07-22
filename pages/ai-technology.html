@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Technology - Learning Diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/diary-style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>📚 AI & Technology Diary</h1>
+    <div class="menu">
+      <a href="../index.html">← Back to Hub</a>
+      <button onclick="addNewEntry()" class="add-btn">Add New Entry</button>
+    </div>
+  </nav>
+
+  <div class="diary-container">
+    <div class="diary-header">
+      <h2>My Learning Journey in AI & Technology</h2>
+      <p>Document your discoveries, insights, and progress in the exciting world of AI & Technology</p>
+    </div>
+
+    <div class="add-entry-form" id="add-entry-form" style="display: none;">
+      <h3>📝 New Learning Entry</h3>
+      <input type="date" id="entry-date" class="diary-input">
+      <input type="text" id="entry-title" placeholder="What did you learn today?" class="diary-input">
+      <textarea id="entry-content" placeholder="Write your detailed notes, insights, or key takeaways..." class="diary-textarea"></textarea>
+      <div class="form-buttons">
+        <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+        <button onclick="cancelEntry()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="diary-entries" id="diary-entries">
+      <!-- Sample entries will be loaded here -->
+      <div class="diary-entry">
+        <div class="entry-date">July 20, 2025</div>
+        <div class="entry-title">Understanding Large Language Models</div>
+        <div class="entry-content">
+          Today I learned about the architecture of LLMs and how transformer models work. Key insights:
+          <ul>
+            <li>Attention mechanisms are crucial for understanding context</li>
+            <li>Training requires massive datasets and computational power</li>
+            <li>Fine-tuning can adapt models to specific tasks</li>
+          </ul>
+          This knowledge will help me better understand AI development trends.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">LLM</span>
+          <span class="tag">Transformers</span>
+          <span class="tag">AI Architecture</span>
+        </div>
+      </div>
+
+      <div class="diary-entry">
+        <div class="entry-date">July 18, 2025</div>
+        <div class="entry-title">AI Ethics and Responsible Development</div>
+        <div class="entry-content">
+          Explored the importance of ethical AI development. Main points covered:
+          - Bias in AI systems and how to mitigate it
+          - Privacy concerns with AI data collection
+          - The need for transparency in AI decision-making
+          
+          Need to research more about AI governance frameworks.
+        </div>
+        <div class="entry-tags">
+          <span class="tag">Ethics</span>
+          <span class="tag">Bias</span>
+          <span class="tag">Privacy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/diary-script.js"></script>
+</body>
+</html>
